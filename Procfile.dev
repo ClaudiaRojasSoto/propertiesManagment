@@ -1,0 +1,4 @@
+web: bin/rails server
+webpack: npm run start
+
+
