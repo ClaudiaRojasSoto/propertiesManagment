@@ -11,6 +11,10 @@ gem 'foreman'
 
 gem 'rack-cors'
 
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'jwt'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
