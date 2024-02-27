@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import greetingsReducer from './reducers/greetingsReducer';
+import authReducer from '../redux/reducers/authReducer';
 
 const rootReducer = combineReducers({
-  greetings: greetingsReducer
+  auth: authReducer
 });
-
-export { greetingsReducer };
 
 export default rootReducer;
