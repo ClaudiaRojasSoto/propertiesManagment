@@ -1,27 +1,15 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { login } from '../redux/actions/authActions';
 
 const LoginButton = () => {
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await axios.post('http://localhost:3000/api/v1/login', {
-        email: email,
-        password: password
-      });
-
-      console.log(response.data);
-
-      localStorage.setItem('token', response.data.token);
-    } catch (error) {
-      console.error('Error en el inicio de sesión:', error);
-
-    }
+    dispatch(login(email, password));
   };
 
   return (
