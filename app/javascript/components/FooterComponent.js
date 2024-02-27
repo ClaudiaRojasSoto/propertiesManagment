@@ -4,7 +4,7 @@ const FooterComponent = () => {
   return (
     <footer>
       <div className="footer-content">
-        ¿Buscas comprar o rentar una propiedad?, Revisa nuestra lista de propiedades.
+        ¿Buscas comprar o rentar una propiedad?, Revisa nuestra.
       </div>
     </footer>
   );

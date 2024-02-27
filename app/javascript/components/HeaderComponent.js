@@ -1,17 +1,21 @@
 import React from 'react';
-import LoginButton from './LoginButton';
-import SignupButton from './SignupButton';
+import PropTypes from 'prop-types';
 
-const HeaderComponent = () => {
+const HeaderComponent = ({ setShowLogin, setShowSignup }) => {
   return (
     <header>
       <h1>Property Management</h1>
       <nav>
-        <LoginButton />
-        <SignupButton />
+        <button onClick={() => setShowLogin(true)}>Login</button>
+        <button onClick={() => setShowSignup(true)}>Sign Up</button>
       </nav>
     </header>
   );
+};
+
+HeaderComponent.propTypes = {
+  setShowLogin: PropTypes.func.isRequired,
+  setShowSignup: PropTypes.func.isRequired,
 };
 
 export default HeaderComponent;
