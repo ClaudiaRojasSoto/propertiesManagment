@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'login', to: 'authentication#login'
       post 'signup', to: 'authentication#register'
+      post 'password/forgot', to: 'password_resets#forgot_password'
+      post 'password/reset', to: 'password_resets#reset_password'
       resources :admin_groups
       resources :users
     end
