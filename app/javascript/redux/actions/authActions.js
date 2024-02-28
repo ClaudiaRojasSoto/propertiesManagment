@@ -14,7 +14,8 @@ export const login = (email, password) => async dispatch => {
   } catch (error) {
     dispatch({
       type: LOGIN_FAILURE,
-      payload: error.response.data
+      error: error.toString()
     });
+    throw new Error('Credenciales incorrectas. Por favor, intenta de nuevo.');
   }
 };
