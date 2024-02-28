@@ -34,6 +34,21 @@ module Api
         head :no_content
       end
 
+      def generate_password_reset_token!
+        self.reset_password_token = SecureRandom.urlsafe_base64
+        self.reset_password_token_expires_at = 24.hours.from_now
+        save!
+        # Aquí enviarías el correo electrónico al usuario con el token
+        # Podrías hacer esto llamando a un método de instancia que maneje el envío del correo electrónico.
+      end
+
+      # Limpia el token y la fecha de expiración después de un restablecimiento exitoso
+      def clear_password_reset_token!
+        self.reset_password_token = nil
+        self.reset_password_token_expires_at = nil
+        save!
+      end
+
       private
 
       def set_user
