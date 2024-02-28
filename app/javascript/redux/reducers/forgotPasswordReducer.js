@@ -1,5 +1,3 @@
-// reducers/forgotPasswordReducer.js
-
 const initialState = {
     loading: false,
     error: null,

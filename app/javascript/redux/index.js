@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import authReducer from './reducers/authReducer'; // Ajusta la ruta según sea necesario
-import { forgotPasswordReducer } from './reducers/forgotPasswordReducer'; // Asegúrate de exportar correctamente estos reducers
+import authReducer from './reducers/authReducer';
+import { forgotPasswordReducer } from './reducers/forgotPasswordReducer';
 import { resetPasswordReducer } from './reducers/resetPasswordReducer';
-import signupReducer from './reducers/signupReducer'; // Ajusta la ruta según sea necesario
+import signupReducer from './reducers/signupReducer';
 
 const rootReducer = combineReducers({
   auth: authReducer,

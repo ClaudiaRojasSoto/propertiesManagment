@@ -11,7 +11,6 @@ const FormSignup = ({ setShowSignup }) => {
     password: '',
     password_confirmation: '',
     congregation: '',
-    // role y admin_group_id pueden ser manejados de forma diferente según tu lógica de negocio
   });
 
   const dispatch = useDispatch();
@@ -27,7 +26,6 @@ const FormSignup = ({ setShowSignup }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Asume que signup espera un objeto con la estructura adecuada
     dispatch(signup(user))
       .then(() => {
         navigate('/dashboard');
@@ -80,7 +78,6 @@ const FormSignup = ({ setShowSignup }) => {
           onChange={handleChange}
           placeholder="Congregación"
         />
-        {/* Otros campos como role y admin_group_id pueden agregarse aquí según la necesidad y la lógica de negocio */}
         <button type="submit">Registrarse</button>
         <button type="button" onClick={() => setShowSignup(false)}>Cerrar</button>
       </form>

@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../redux/actions/authActions';
-import { useNavigate, Link } from 'react-router-dom'; // Importa Link
+import { useNavigate, Link } from 'react-router-dom';
 
 const FormLogin = ({ setShowLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(''); // Estado local para manejar el error
+  const [error, setError] = useState('');
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -22,9 +22,8 @@ const FormLogin = ({ setShowLogin }) => {
         }
       })
       .catch(err => {
-        // Aquí capturas el error y actualizas el estado local
         console.error("Error during login:", err);
-        setError('Credenciales inválidas. Intenta nuevamente.'); // Mensaje de error genérico
+        setError('Credenciales inválidas. Intenta nuevamente.');
       });
   };
 
