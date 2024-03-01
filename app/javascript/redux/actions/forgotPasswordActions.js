@@ -4,7 +4,7 @@ export const forgotPasswordRequest = (email) => {
   return (dispatch) => {
     dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
 
-    const apiEndpoint = '/api/v1/password/forgot';
+    const apiEndpoint = 'http://localhost:3000/api/v1/password/forgot';
 
     const body = { email };
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { resetPasswordRequest } from '../redux/actions/resetPasswordActions';
+import { resetPassword } from '../redux/actions/resetPasswordActions';
 
 function ResetPasswordComponent() {
   const [password, setPassword] = useState('');
@@ -11,7 +11,7 @@ function ResetPasswordComponent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(resetPasswordRequest(password, confirmPassword, token));
+    dispatch(resetPassword(password, confirmPassword, token));
   };
 
   return (
