@@ -101,6 +101,10 @@ GEM
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    dotenv (3.1.0)
+    dotenv-rails (3.1.0)
+      dotenv (= 3.1.0)
+      railties (>= 6.1)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -126,6 +130,10 @@ GEM
     jwt (2.8.0)
       base64
     language_server-protocol (3.17.0.3)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -275,11 +283,13 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv-rails
   foreman
   importmap-rails
   jbuilder
   jsbundling-rails
   jwt
+  letter_opener
   pg (~> 1.1)
   puma (>= 5.0)
   rack-cors
